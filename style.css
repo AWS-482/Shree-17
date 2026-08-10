@@ -64,5 +64,10 @@ body {
 .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+
+    /* Fix truncated faces in Hall of Fame photo cards */
+.snap-center img {
+    object-position: top center !important;
+}
 }
 
