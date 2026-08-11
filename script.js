@@ -75,10 +75,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoPlayer.classList.remove('hidden');
                 videoUploadLabel.classList.add('hidden');
                 videoPlayer.play();
-            }
-        });
-    }
 
+                function toggleVideoSound() {
+  const video = document.getElementById('bg-video');
+  const btn = document.getElementById('sound-btn');
+
+  if (video.muted) {
+    video.muted = false;
+    video.play();
+    btn.innerHTML = "🔇 Mute Sound";
+  } else {
+    video.muted = true;
+    btn.innerHTML = "🔊 Play Sound";
+  }
+}
+}
+});
+ }
 
     // --- Sakura Petal Animation ---
     const canvas = document.getElementById('sakura-canvas');
