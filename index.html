@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday, Shree! 🎉</title>
 
+  <!-- Option 1: Password Protection Script -->
+  <script>
+    (function() {
+      const secret = "Mahadev17"; // Set your custom password here
+      const pass = prompt("🔒 Restricted Access: Enter the secret password to view Shree's Birthday Site:");
+      if (pass !== secret) {
+        alert("❌ Incorrect password! Access denied.");
+        document.write("<div style='background:#1a1a2e; color:#ff4d6d; height:100vh; display:flex; flex-direction:column; align-items:center; justify-center; font-family:sans-serif; text-align:center; padding:20px;'><h1>🔒 Access Denied</h1><p style='color:#fff;'>You need a valid password to view this page.</p></div>");
+        window.stop();
+      }
+    })();
+  </script>
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -28,7 +41,6 @@
 <!-- Canvas for the falling cherry blossoms -->
 <canvas id="sakura-canvas"></canvas>
 
-<!-- Section 1: Hero Welcome -->
 <!-- Section 1: Hero Welcome -->
 <header class="h-screen relative flex items-end justify-center text-white overflow-hidden pb-8 sm:pb-12 md:pb-16">
   <!-- Background Video -->
@@ -64,7 +76,7 @@
       <p>Wish you a very Happy Birthday! May God fulfil all your wishes,thank you for being the absolute best friend anyone could ever ask for. Whether I call you Shree, Pottiluuu, or pottiii, you will always be my favorite human! Our bond is irreplaceable, and I’m so grateful for all the laughter, secret talks, and endless memories we share.</p>
       <p>Always connected to your roots, a true friend to everyone. You always remain yourself, and that is your vibe! We all are very lucky—we aren't in the city of gems, yet we found a real gem in you.</p>
       <p class="text-right mt-8 font-semibold">
-        Lots of love & regards ❤️
+        Lots of love & regards ❤️<br>
         ArunPrabha
       </p>
     </div>
@@ -114,7 +126,7 @@
     </div>
   </section>
 
-<!-- Section 4: Hall of Fame -->
+  <!-- Section 4: Hall of Fame -->
   <section class="my-16 md:my-24">
     <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame 🏆</h2>
     <div class="relative">
@@ -224,22 +236,22 @@
         <img src="img/1.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 1">
       </a>
       <a href="img/2.png" data-aos="zoom-in" data-aos-delay="100" class="block w-full h-48 md:h-64 bg-pink-50 rounded-lg overflow-hidden">
-  <img src="img/2.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain border-4 border-white rounded-lg" alt="Memory 2">
+        <img src="img/2.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain border-4 border-white rounded-lg" alt="Memory 2">
       </a>
       <a href="img/3.png" data-aos="zoom-in" data-aos-delay="200" class="block w-full h-48 md:h-64">
-  <img src="img/3.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center top;" alt="Memory 3">
+        <img src="img/3.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center top;" alt="Memory 3">
       </a>
       <a href="img/4.png" data-aos="zoom-in" data-aos-delay="300" class="block w-full h-48 md:h-64">
-  <img src="img/4.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center 85%;" alt="Memory 4">
-       </a>
+        <img src="img/4.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center 85%;" alt="Memory 4">
+      </a>
       
       <!-- Second Row -->
       <a href="img/5.png" data-aos="zoom-in" data-aos-delay="400" class="block w-full h-48 md:h-64 bg-slate-900 rounded-lg overflow-hidden">
-  <img src="img/5.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain rounded-lg" alt="Memory 5">
+        <img src="img/5.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain rounded-lg" alt="Memory 5">
       </a>
       <a href="img/6.png" data-aos="zoom-in" data-aos-delay="500" class="block w-full h-48 md:h-64">
-  <img src="img/6.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center top;" alt="Memory 6">
-       </a>
+        <img src="img/6.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" style="object-position: center top;" alt="Memory 6">
+      </a>
       <a href="img/7.png" data-aos="zoom-in" data-aos-delay="600" class="block w-full h-48 md:h-64">
         <img src="img/7.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 7">
       </a>
@@ -252,7 +264,7 @@
         <img src="img/9.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 9">
       </a>
       <a href="img/10.png" data-aos="zoom-in" data-aos-delay="900" class="block w-full h-48 md:h-64 bg-amber-50 rounded-lg overflow-hidden">
-  <img src="img/10.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain rounded-lg" alt="Memory 10">
+        <img src="img/10.png" class="hover:scale-105 transition-transform duration-300 w-full h-full object-contain rounded-lg" alt="Memory 10">
       </a>
       <a href="img/11.png" data-aos="zoom-in" data-aos-delay="1000" class="block w-full h-48 md:h-64">
         <img src="img/11.png" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 w-full h-full object-cover border-4 border-white" alt="Memory 11">
