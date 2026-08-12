@@ -112,74 +112,98 @@
     </div>
   </section>
 
-  <!-- Section 4: Hall of Fame -->
+<!-- Section 4: Hall of Fame -->
   <section class="my-16 md:my-24">
     <h2 class="text-4xl md:text-5xl font-anime text-center mb-12" data-aos="fade-up">Hall of Fame 🏆</h2>
     <div class="relative">
       
       <!-- Scroll Buttons -->
-      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+      <button id="scroll-left-btn" class="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
       </button>
-      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100">
+      <button id="scroll-right-btn" class="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition-opacity opacity-0 md:opacity-100 cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-sakura" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
       </button>
 
       <!-- Scrollable Container -->
       <div id="hall-of-fame-scroller" class="flex overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide p-4 -mx-4">
-        <div class="flex snap-x snap-mandatory gap-8">
+        <div class="flex snap-x snap-mandatory gap-6 md:gap-8">
           
           <!-- Card 1 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="100">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/smile.png" alt="Shree Photo 1" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Pottiii's Smile</h3>
-              <p class="mt-2">"Brightening up every room!"</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/smile.png" alt="Shree Photo 1" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">Pottiii's Smile</h3>
+                <p class="mt-2 text-sm md:text-base">"Brightening up every room!"</p>
+              </div>
             </div>
           </div>
 
           <!-- Card 2 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="200">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/cute.png" alt="Shree Photo 2" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Cutest Vibe</h3>
-              <p class="mt-2">"Pure anime protagonist energy."</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/cute.png" alt="Shree Photo 2" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">Cutest Vibe</h3>
+                <p class="mt-2 text-sm md:text-base">"Pure anime protagonist energy."</p>
+              </div>
             </div>
           </div>
 
           <!-- Card 3 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="300">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/demon.png" alt="Shree Photo 3" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Iconic Moment</h3>
-              <p class="mt-2">"One for the history books!"</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/demon.png" alt="Shree Photo 3" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">Iconic Moment</h3>
+                <p class="mt-2 text-sm md:text-base">"One for the history books!"</p>
+              </div>
             </div>
           </div>
 
           <!-- Card 4 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="400">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/spirit.png" alt="Shree Photo 4" class="w-full h-80 object-cover rounded-md mb-4" style="object-position: center 85%;">
-              <h3 class="text-2xl font-anime text-sakura">Main Character</h3>
-              <p class="mt-2">"Shree in her natural element."</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/spirit.png" alt="Shree Photo 4" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">Main Character</h3>
+                <p class="mt-2 text-sm md:text-base">"Shree in her natural element."</p>
+              </div>
             </div>
           </div>
 
           <!-- Card 5 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="500">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/tokyo.png" alt="Shree Photo 5" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">Pottiluuu Special</h3>
-              <p class="mt-2">"Always bringing joy!"</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/tokyo.png" alt="Shree Photo 5" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">Pottiluuu Special</h3>
+                <p class="mt-2 text-sm md:text-base">"Always bringing joy!"</p>
+              </div>
             </div>
           </div>
 
           <!-- Card 6 -->
           <div class="snap-center flex-shrink-0 w-10/12 sm:w-1/2 md:w-1/3 lg:w-1/4" data-aos="fade-up" data-aos-delay="600">
-            <div class="bg-white p-6 rounded-lg shadow-lg text-center h-full">
-              <img src="img/L.png" alt="Shree Photo 6" class="w-full h-80 object-cover rounded-md mb-4">
-              <h3 class="text-2xl font-anime text-sakura">The Real Gem</h3>
-              <p class="mt-2">"Best friend anyone could ask for."</p>
+            <div class="bg-white p-5 rounded-lg shadow-lg text-center h-full flex flex-col justify-between">
+              <div class="w-full h-64 sm:h-72 md:h-80 bg-pink-50 rounded-md mb-4 overflow-hidden flex items-center justify-center">
+                <img src="img/L.png" alt="Shree Photo 6" class="w-full h-full object-contain rounded-md">
+              </div>
+              <div>
+                <h3 class="text-2xl font-anime text-sakura">The Real Gem</h3>
+                <p class="mt-2 text-sm md:text-base">"Best friend anyone could ask for."</p>
+              </div>
             </div>
           </div>
 
