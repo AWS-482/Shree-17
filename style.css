@@ -115,6 +115,25 @@ body {
 @media (max-width: 768px) {
   #bg-video {
     object-position: 15% center !important;
+
+      /* =========================================================
+   MOBILE-SPECIFIC HALL OF FAME FACE ALIGNMENT
+   ========================================================= */
+
+@media (max-width: 768px) {
+  /* Force Hall of Fame images to prioritize faces on mobile */
+  #hall-of-fame-scroller .snap-center img,
+  .snap-center img {
+    height: 260px !important;
+    object-fit: cover !important;
+    object-position: center 15% !important; /* Keeps focus strictly on heads and faces */
+  }
+
+  /* Prevent card content from overflowing on small mobile displays */
+  #hall-of-fame-scroller .snap-center {
+    width: 85vw !important; /* Gives cards proper width on phone screens */
+  }
+}
   }
 }
 }
