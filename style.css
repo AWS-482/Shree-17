@@ -68,6 +68,42 @@ body {
     /* Fix truncated faces in Hall of Fame photo cards */
 .snap-center img {
     object-position: top center !important;
+
+    /* =========================================================
+   RESPONSIVE PHOTO FIXES FOR MOBILE, TABLET & DESKTOP
+   ========================================================= */
+
+/* Fix Hall of Fame Cards on Mobile & Large Screens */
+#hall-of-fame-scroller img {
+  width: 100%;
+  height: 280px;
+  object-fit: contain !important;
+  background-color: #fdf2f4;
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  #hall-of-fame-scroller img {
+    height: 320px;
+  }
+}
+
+/* Fix Timeline & Gallery Photos across all Screen Sizes */
+.space-y-16 img,
+#lightgallery img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Ensure Gallery container images adapt smoothly on mobile */
+#lightgallery a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #fff;
+}
 }
 }
 
