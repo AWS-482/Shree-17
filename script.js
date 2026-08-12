@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const countdownElement = document.getElementById('countdown');
 
     function updateAge() {
+        if (!countdownElement) return;
         const now = new Date();
 
         let years = now.getFullYear() - birthDate.getFullYear();
@@ -26,20 +27,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
         countdownElement.innerHTML = `${years}y ${months}m ${days}d <br> ${hours}h ${minutes}m ${seconds}s`;
     }
-    setInterval(updateAge, 1000);
-    updateAge();
+    
+    if (countdownElement) {
+        setInterval(updateAge, 1000);
+        updateAge();
+    }
 
     // --- Initialize AOS (Animate on Scroll) ---
-    AOS.init({
-        duration: 800,
-        once: true,
-    });
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    }
 
     // --- Initialize LightGallery ---
-    lightGallery(document.getElementById('lightgallery'), {
-        speed: 500,
-        download: false
-    });
+    const galleryElem = document.getElementById('lightgallery');
+    if (galleryElem && typeof lightGallery !== 'undefined') {
+        lightGallery(galleryElem, {
+            speed: 500,
+            download: false
+        });
+    }
 
     // --- Hall of Fame Scroller ---
     const scroller = document.getElementById('hall-of-fame-scroller');
@@ -47,14 +56,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollRightBtn = document.getElementById('scroll-right-btn');
     if (scroller && scrollLeftBtn && scrollRightBtn) {
         const card = scroller.querySelector('.snap-center');
-        const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card.parentElement).gap);
+        if (card) {
+            const cardWidth = card.offsetWidth + parseInt(getComputedStyle(card.parentElement).gap || '0');
 
-        scrollRightBtn.addEventListener('click', () => {
-            scroller.scrollBy({ left: cardWidth, behavior: 'smooth' });
-        });
-        scrollLeftBtn.addEventListener('click', () => {
-            scroller.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-        });
+            scrollRightBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: cardWidth, behavior: 'smooth' });
+            });
+            scrollLeftBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+            });
+        }
     }
 
     // --- Video Uploader ---
@@ -62,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoPlayer = document.getElementById('video-player');
     const videoUploadLabel = document.getElementById('video-upload-label');
 
-    if(videoUploadInput && videoPlayer && videoUploadLabel) {
+    if (videoUploadInput && videoPlayer && videoUploadLabel) {
         videoUploadLabel.addEventListener('click', () => {
             videoUploadInput.click();
         });
@@ -75,23 +86,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 videoPlayer.classList.remove('hidden');
                 videoUploadLabel.classList.add('hidden');
                 videoPlayer.play();
-
-                function toggleVideoSound() {
-  const video = document.getElementById('bg-video');
-  const btn = document.getElementById('sound-btn');
-
-  if (video.muted) {
-    video.muted = false;
-    video.play();
-    btn.innerHTML = "🔇 Mute Sound";
-  } else {
-    video.muted = true;
-    btn.innerHTML = "🔊 Play Sound";
-  }
-}
-}
-});
- }
+            }
+        });
+    }
 
     // --- Sakura Petal Animation ---
     const canvas = document.getElementById('sakura-canvas');
@@ -135,14 +132,14 @@ document.addEventListener('DOMContentLoaded', function() {
             ctx.closePath();
             ctx.fillStyle = '#FFB7C5';
             ctx.fill();
-        }
+        };
 
         Petal.prototype.update = function() {
             this.x += this.xSpeed;
             this.y += this.ySpeed;
             this.flip += this.flipSpeed;
             this.draw();
-        }
+        };
 
         function createPetals() {
             petals = [];
@@ -164,3 +161,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// --- GLOBAL FUNCTION FOR AUDIO/VIDEO TOGGLE ---
+// Placed outside DOMContentLoaded so onclick="toggleVideoSound()" in index.html works smoothly
+function toggleVideoSound() {
+    const video = document.getElementById('bg-video');
+    const btn = document.getElementById('sound-btn');
+
+    if (video) {
+        if (video.muted) {
+            video.muted = false;
+            video.play().then(() => {
+                if (btn) btn.innerHTML = "🔇 Mute Sound";
+            }).catch(err => {
+                console.log("Autoplay error:", err);
+            });
+        } else {
+            video.muted = true;
+            if (btn) btn.innerHTML = "🔊 Play Sound";
+        }
+    }
+}
