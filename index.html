@@ -30,20 +30,24 @@
 
 <!-- Section 1: Hero Welcome -->
 <header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
-  <video id="bg-video" autoplay loop playsinline class="absolute top-0 left-0 w-full h-full object-contain bg-black z-[-1]">
-  <source src="img/sa.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <!-- Video element: object-cover with left-center alignment brings her face directly into view -->
+  <video id="bg-video" autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]" style="object-position: 25% center;">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
+  <!-- Dark overlay to keep text readable -->
   <div class="absolute inset-0 bg-black bg-opacity-40"></div>
 
   <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
     <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Shree! 🎂</h1>
     <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey with our favorite Pottiluuu✨</p>
     <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
-    <button id="sound-btn" onclick="toggleVideoSound()" class="mt-6 px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 z-20">
-  🔊 Play Sound
-</button>
+    
+    <!-- Sound button -->
+    <button id="sound-btn" onclick="toggleVideoSound()" class="mt-6 px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 z-20 cursor-pointer">
+      🔊 Play Sound
+    </button>
   </div>
 </header>
 
