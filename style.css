@@ -103,6 +103,20 @@ body {
   justify-content: center;
   overflow: hidden;
   background-color: #fff;
+/* Force hero background video to show her face properly */
+#bg-video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 20% center !important; /* Positions video frame over her face */
+}
+
+/* Adjustments specifically for mobile screens */
+@media (max-width: 768px) {
+  #bg-video {
+    object-position: 15% center !important;
+  }
+}
 }
 }
 }
