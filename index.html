@@ -29,23 +29,25 @@
 <canvas id="sakura-canvas"></canvas>
 
 <!-- Section 1: Hero Welcome -->
-<header class="h-screen relative flex items-center justify-center text-white overflow-hidden">
-  <!-- Video element: object-cover with left-center alignment brings her face directly into view -->
-  <video id="bg-video" autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full z-[-1]">
-  <source src="img/sa.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<!-- Section 1: Hero Welcome -->
+<header class="h-screen relative flex items-end justify-center text-white overflow-hidden pb-8 sm:pb-12 md:pb-16">
+  <!-- Background Video -->
+  <video id="bg-video" autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-contain bg-black z-[-1]">
+    <source src="img/sa.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-  <!-- Dark overlay to keep text readable -->
-  <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+  <!-- Gradient overlay at the bottom so text remains crystal clear without covering her face -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
-  <div class="text-center z-10 p-4" data-aos="fade-in" data-aos-duration="1500">
-    <h1 class="text-5xl md:text-7xl font-anime drop-shadow-lg">Happy Birthday, Shree! 🎂</h1>
-    <p class="mt-4 text-xl font-semibold">Celebrating a wonderful journey with our favorite Pottiluuu✨</p>
-    <div id="countdown" class="mt-6 text-2xl font-semibold tracking-widest leading-relaxed"></div>
+  <!-- Bottom Caption Container -->
+  <div class="text-center z-10 p-4 max-w-xl mx-auto" data-aos="fade-in" data-aos-duration="1500">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-anime drop-shadow-lg">Happy Birthday, Shree! 🎂</h1>
+    <p class="mt-2 text-sm sm:text-base md:text-lg font-semibold opacity-95">Celebrating a wonderful journey with our favorite Pottiluuu✨</p>
+    <div id="countdown" class="mt-3 text-base sm:text-lg md:text-xl font-semibold tracking-widest leading-relaxed"></div>
     
     <!-- Sound button -->
-    <button id="sound-btn" onclick="toggleVideoSound()" class="mt-6 px-6 py-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 z-20 cursor-pointer">
+    <button id="sound-btn" onclick="toggleVideoSound()" class="mt-4 px-5 py-2 bg-pink-500 hover:bg-pink-600 text-white text-sm font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 z-20 cursor-pointer">
       🔊 Play Sound
     </button>
   </div>
