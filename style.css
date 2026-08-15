@@ -1,52 +1,81 @@
 /* Custom styles for our Anime Theme */
-
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #F0F8FF; /* Alice Blue - a very light sky blue */
-  color: #2c3e50; /* Dark Navy/Slate */
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F8FF; /* Alice Blue - a very light sky blue */
+    color: #2c3e50; /* Dark Navy/Slate */
 }
-
 .font-anime {
-  font-family: 'Mochiy Pop One', sans-serif;
+    font-family: 'Mochiy Pop One', sans-serif;
 }
-
 .text-sakura {
-  color: #FFB7C5; /* Cherry Blossom Pink */
+    color: #FFB7C5; /* Cherry Blossom Pink */
 }
-
 .bg-navy {
-  background-color: #2c3e50;
+    background-color: #2c3e50;
 }
-
 /* Style for the falling petals canvas */
 #sakura-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none; /* Allows clicks to go through the canvas */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none; /* Allows clicks to go through the canvas */
 }
-
 /* For hiding the scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
-
 .scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
-/* Fix truncated faces in Hall of Fame photo cards */
+
+/* Custom styles for our Anime Theme */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F0F8FF; /* Alice Blue - a very light sky blue */
+    color: #2c3e50; /* Dark Navy/Slate */
+}
+.font-anime {
+    font-family: 'Mochiy Pop One', sans-serif;
+}
+.text-sakura {
+    color: #FFB7C5; /* Cherry Blossom Pink */
+}
+.bg-navy {
+    background-color: #2c3e50;
+}
+/* Style for the falling petals canvas */
+#sakura-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none; /* Allows clicks to go through the canvas */
+}
+/* For hiding the scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+
+    /* Fix truncated faces in Hall of Fame photo cards */
 .snap-center img {
-  object-position: top center !important;
-}
+    object-position: top center !important;
 
-/* =========================================================
+
+    /* =========================================================
    RESPONSIVE PHOTO FIXES FOR MOBILE, TABLET & DESKTOP
    ========================================================= */
+
 
 /* Fix Hall of Fame Cards on Mobile & Large Screens */
 #hall-of-fame-scroller img {
@@ -57,11 +86,13 @@ body {
   border-radius: 0.5rem;
 }
 
+
 @media (min-width: 768px) {
   #hall-of-fame-scroller img {
     height: 320px;
   }
 }
+
 
 /* Fix Timeline & Gallery Photos across all Screen Sizes */
 .space-y-16 img,
@@ -71,6 +102,7 @@ body {
   object-position: center top;
 }
 
+
 /* Ensure Gallery container images adapt smoothly on mobile */
 #lightgallery a {
   display: flex;
@@ -78,8 +110,6 @@ body {
   justify-content: center;
   overflow: hidden;
   background-color: #fff;
-}
-
 /* Force hero background video to show her face properly */
 #bg-video {
   width: 100% !important;
@@ -88,16 +118,19 @@ body {
   object-position: 20% center !important; /* Positions video frame over her face */
 }
 
+
 /* Adjustments specifically for mobile screens */
 @media (max-width: 768px) {
   #bg-video {
     object-position: 15% center !important;
-  }
 
-  /* =========================================================
-     MOBILE-SPECIFIC HALL OF FAME FACE ALIGNMENT
-     ========================================================= */
 
+      /* =========================================================
+   MOBILE-SPECIFIC HALL OF FAME FACE ALIGNMENT
+   ========================================================= */
+
+
+@media (max-width: 768px) {
   /* Force Hall of Fame images to prioritize faces on mobile */
   #hall-of-fame-scroller .snap-center img,
   .snap-center img {
@@ -106,14 +139,13 @@ body {
     object-position: center 15% !important; /* Keeps focus strictly on heads and faces */
   }
 
+
   /* Prevent card content from overflowing on small mobile displays */
   #hall-of-fame-scroller .snap-center {
-    width: 85vw !important; /* Gives cards proper width on phone screens */
-  }
-
-  /* Specific mobile framing for Card 5 (Pottiluuu Special) */
-  #card-5-img {
-    object-position: center 22% !important;
-    height: 270px !important;
+    width: 85vw !important; /* Gives cards proper width on phone screens */  }
+}
   }
 }
+}
+}
+} 
