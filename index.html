@@ -5,18 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday, Shree! 🎉</title>
 
-  <!-- Option 1: Password Protection Script -->
-  <script>
-    (function() {
-      const secret = "Mahadev17"; // Set your custom password here
-      const pass = prompt("🔒 Restricted Access: Enter the secret password to view Shree's Birthday Site:");
-      if (pass !== secret) {
-        alert("❌ Incorrect password! Access denied.");
-        document.write("<div style='background:#1a1a2e; color:#ff4d6d; height:100vh; display:flex; flex-direction:column; align-items:center; justify-center; font-family:sans-serif; text-align:center; padding:20px;'><h1>🔒 Access Denied</h1><p style='color:#fff;'>You need a valid password to view this page.</p></div>");
-        window.stop();
-      }
-    })();
-  </script>
+  <!-- Password Protection & Google Analytics -->
+<script>
+  (function() {
+    const secret = "Mahadev17";
+    const pass = prompt("🔒 Restricted Access: Enter the secret password to view Shree's Birthday Site:");
+    
+    if (pass !== secret) {
+      alert("❌ Incorrect password! Access denied.");
+      document.write("<div style='background:#1a1a2e; color:#ff4d6d; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:sans-serif; text-align:center; padding:20px;'><h1>🔒 Access Denied</h1><p style='color:#fff;'>You need a valid password to view this page.</p></div>");
+      window.stop();
+    } else {
+      // Replace YOUR_MEASUREMENT_ID with your G-XXXXXXXXXX ID
+      const gaId = "G-3NCDMPLFFZ"; 
+
+      const gaScript = document.createElement('script');
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+      document.head.appendChild(gaScript);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', gaId);
+    }
+  })();
+</script>
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
